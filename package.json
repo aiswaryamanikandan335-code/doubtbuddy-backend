@@ -1,0 +1,28 @@
+{
+  "name": "doubtbuddy-api",
+  "version": "1.0.0",
+  "description": "DoubtBuddy backend: Node.js + Express on Cloud Run, Firebase Auth, Firestore, Cloud Storage, Gemini (Vertex AI)",
+  "main": "src/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env src/server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.0",
+    "firebase-admin": "^13.0.0",
+    "helmet": "^8.0.0",
+    "multer": "^2.0.0",
+    "pdfjs-dist": "^4.10.38"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
