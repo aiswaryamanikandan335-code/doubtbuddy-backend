@@ -7,6 +7,8 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 COPY src ./src
+COPY start.js ./
 
 USER node
-CMD ["node", "src/server.js"]
+# start.js unlocks the keys with DOUBTBUDDY_SECRET, then starts src/server.js
+CMD ["node", "start.js"]
